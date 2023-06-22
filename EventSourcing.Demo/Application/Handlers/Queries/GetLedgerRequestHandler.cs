@@ -25,7 +25,6 @@ public class GetLedgerRequestHandler : IRequestHandler<GetLedgerRequest, LedgerR
             CustomerId = ledger.CustomerId,
             Journeys = ledger.Journeys,
             OrderId = ledger.OrderId,
-            PartitionKey = ledger.PartitionKey,
             RequiresProcessing = ledger.RequiresProcessing
         };
     }

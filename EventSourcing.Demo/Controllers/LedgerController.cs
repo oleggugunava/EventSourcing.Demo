@@ -35,7 +35,6 @@ public class LedgerController : ControllerBase
             request.CustomerId,
             request.Begin,
             request.End,
-            request.PartitionKey,
             request.OrderId,
             request.RequiresProcessing);
 

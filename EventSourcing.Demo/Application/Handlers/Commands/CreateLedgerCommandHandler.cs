@@ -33,7 +33,6 @@ public class CreateLedgerCommandHandler : IRequestHandler<CreateLedgerCommand, B
                 ledgerDTO.CustomerId,
                 ledgerDTO.Begin,
                 ledgerDTO.End,
-                ledgerDTO.PartitionKey,
                 ledgerDTO.OrderId,
                 ledgerDTO.RequiresProcessing);
 
@@ -63,7 +62,6 @@ public class CreateLedgerCommandHandler : IRequestHandler<CreateLedgerCommand, B
         {
             Begin = ledger.Begin,
             End = ledger.End,
-            PartitionKey = ledger.PartitionKey,
             OrderId = ledger.OrderId,
             RequiresProcessing = ledger.RequiresProcessing,
             Id = ledger.Id,

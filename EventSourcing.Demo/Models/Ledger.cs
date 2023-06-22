@@ -10,7 +10,6 @@ public class Ledger : Aggregate
     public string CustomerId { get; private set; } = string.Empty;
     public string Begin { get; private set; } = string.Empty;
     public string End { get; private set; } = string.Empty;
-    public string PartitionKey { get; private set; } = string.Empty;
     public string OrderId { get; private set; } = string.Empty;
     public bool RequiresProcessing { get; private set; }
     public List<Journey> Journeys  => _journeys;
@@ -20,7 +19,6 @@ public class Ledger : Aggregate
            string customerId,
            string begin,
            string end,
-           string partitionKey,
            string orderId,
            bool requiresProcessing)
     {
@@ -30,7 +28,6 @@ public class Ledger : Aggregate
             CustomerId= customerId,
             Begin=begin,
             End=end,
-            PartitionKey=partitionKey,
             OrderId=orderId,
             RequiresProcessing=requiresProcessing
         };
@@ -49,7 +46,6 @@ public class Ledger : Aggregate
         CustomerId = ledgerCreated.CustomerId;
         Begin = ledgerCreated.Begin;
         End = ledgerCreated.End;
-        PartitionKey = ledgerCreated.PartitionKey;
         OrderId = ledgerCreated.OrderId;
         RequiresProcessing = ledgerCreated.RequiresProcessing;
     }
